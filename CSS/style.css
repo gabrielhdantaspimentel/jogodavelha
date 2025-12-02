@@ -1,0 +1,81 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tela fixa */
+html, body {
+    height: 100vh;       /* altura da tela */
+    width: 100vw;        /* largura da tela */
+    overflow: hidden;    /* remove barra de rolagem */
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(to bottom, #0d1b2a, #1b3b6f);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza vertical */
+    align-items: center;     /* centraliza horizontal */
+}
+
+/* Cabeçalho */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Tabuleiro */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 colunas de 100px */
+    grid-gap: 5px;                            /* espaçamento entre células */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Células do tabuleiro */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 15px;
+    transition: background-color 0.2s, box-shadow 0.3s;
+    color: #0a5079; /* azul bebê para X e O */
+}
+
+/* Efeito leve de brilho ao passar o mouse */
+.cell:hover {
+    background-color: #ddd;
+    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.877); /* brilho azul bebê sutil */
+}
+
+/* Mensagem do jogo */
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* Botão reiniciar */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #0c7cfd;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #357ab8;
+}
